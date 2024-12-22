@@ -1,26 +1,13 @@
-@font-face {
-    font-family: 'BannockBraeGothicRRWOFF';
-    src: url('fonts/BannockBraeGothicRR.woff') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'BannockBraeGothicRRWOFF2';
-    src: url('fonts/BannockBraeGothicRR.woff2') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Global styles */
 body {
     margin: 0;
-    font-family: 'BannockBraeGothicRRWOFF', 'BannockBraeGothicRRWOFF2';
+    font-family: 'BannockBraeGothicRR', Arial, sans-serif; /* Ensure your custom font works */
+    color: white;
+    text-shadow: 2px 2px 5px black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
-    text-shadow: 2px 2px 5px black;
     position: relative;
     overflow: hidden;
 }
@@ -32,14 +19,46 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-
     background: url('images/octupus_1.jpg') no-repeat center center fixed;
     background-size: cover;
-
-    filter: blur(5px); /* Adjust blur intensity */
-    z-index: -1; /* Push the background behind other content */
+    filter: blur(5px);
+    z-index: -1;
 }
 
+/* Styling for the "Coming Soon" container */
+.coming-soon {
+    text-align: center;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+/* Heading styling */
 h1 {
     font-size: 4rem;
+    margin: 0;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Make the heading smaller on mobile */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Adjust the layout for smaller screens */
+    .coming-soon {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjust for very small screens */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Ensure there's no unwanted padding or margin on tiny screens */
+    .coming-soon {
+        padding: 5px;
+    }
 }
