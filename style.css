@@ -18,6 +18,7 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    width: 100vw; /* Ensure the width covers the entire viewport */
 }
 
 body::before {
@@ -31,6 +32,7 @@ body::before {
     background-size: cover;
     filter: blur(5px);
     z-index: -1;
+    margin: 0; /* Ensure no margin is pushing the image */
 }
 
 /* Styling for the "Coming Soon" container */
