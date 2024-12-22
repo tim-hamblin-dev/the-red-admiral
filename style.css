@@ -1,6 +1,13 @@
 @font-face {
-    font-family: 'BannockBraeGothicRR';
-    src: url('fonts/BannockBraeGothicRR.otf') format('opentype');
+    font-family: 'BannockBraeGothicRRWOFF';
+    src: url('fonts/BannockBraeGothicRR.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BannockBraeGothicRRWOFF2';
+    src: url('fonts/BannockBraeGothicRR.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +19,7 @@ body {
     background-size: cover;
     color: white;
     display: flex;
-    font-family: 'BannockBraeGothicRR';
+    font-family: 'BannockBraeGothicRRWOFF', 'BBannockBraeGothicRRWOFF2';
     justify-content: center;
     align-items: center;
     height: 100vh;
