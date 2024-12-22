@@ -1,4 +1,12 @@
 /* Global styles */
+@font-face {
+    font-family: 'BannockBraeGothicRR';
+    src: url('fonts/BannockBraeGothicRR.woff2') format('woff2'),
+         url('fonts/BannockBraeGothicRR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: 'BannockBraeGothicRR', Arial, sans-serif; /* Ensure your custom font works */
