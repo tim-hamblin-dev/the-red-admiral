@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    font-family: 'BannockBraeGothicRR', Arial, sans-serif; /* Ensure your custom font works */
+    font-family: 'BannockBraeGothicRR', Arial, sans-serif;
     color: white;
     text-shadow: 2px 2px 5px black;
     display: flex;
@@ -18,18 +18,18 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background: url('images/octupus_1.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-body::before {
-    content: '';
+.background-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/octupus_1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    filter: blur(5px);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
     z-index: -1;
 }
 
