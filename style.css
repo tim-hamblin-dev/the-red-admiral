@@ -126,6 +126,22 @@ h1 {
     .coming-soon {
         padding: 10px;
     }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .form-container label,
+    .form-container input[type="email"],
+    .form-container button {
+        flex: 0 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -135,5 +151,21 @@ h1 {
 
     .coming-soon {
         padding: 5px;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .form-container label,
+    .form-container input[type="email"],
+    .form-container button {
+        flex: 0 0;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
