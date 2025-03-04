@@ -1,4 +1,3 @@
-/* Global styles */
 @font-face {
     font-family: 'BannockBraeGothicRR';
     src: url('fonts/BannockBraeGothicRR.woff2') format('woff2'),
@@ -7,19 +6,30 @@
     font-style: normal;
 }
 
+:root {
+    --color-purple: #856B98;
+    --color-darker-purple: #685487;
+    --color-darkest-purple: #3D2E67;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     font-family: 'BannockBraeGothicRR', Arial, sans-serif;
     color: white;
     text-shadow: 2px 2px 5px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     position: relative;
     overflow: hidden;
     background: url('images/octupus_1.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+.coming-soon {
+    text-align: center;
 }
 
 .background-overlay {
@@ -33,39 +43,96 @@ body {
     z-index: -1;
 }
 
-/* Styling for the "Coming Soon" container */
-.coming-soon {
-    text-align: center;
-    padding: 20px;
-    margin: 0 20px;
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 25%;
 }
 
-/* Heading styling */
+.form-container form {
+    flex: 1;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container label {
+    flex: 0;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.form-container input[type="email"] {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    font-family: 'BannockBraeGothicRR', Arial, sans-serif;
+    color: var(--color-darker-purple);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px #999;
+    transition: all 0.3s ease;
+}
+
+.form-container input[type="email"]:focus {
+    outline: none;
+}
+
+.form-container button {
+    flex: 0 0 auto;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'BannockBraeGothicRR', Arial, sans-serif;
+    background-color: var(--color-purple);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px #999;
+    transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--color-darker-purple);
+}
+
+.form-container button:active {
+    background-color: var(--color-darkest-purple);
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.form-container #thankYouMessage {
+    flex: 0 1 auto;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 20px auto;
+}
+
 h1 {
     font-size: 4rem;
     margin: 0;
 }
 
-/* Responsive design for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Make the heading smaller on mobile */
     h1 {
         font-size: 2.5rem;
     }
 
-    /* Adjust the layout for smaller screens */
     .coming-soon {
         padding: 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Further adjust for very small screens */
     h1 {
         font-size: 2rem;
     }
 
-    /* Ensure there's no unwanted padding or margin on tiny screens */
     .coming-soon {
         padding: 5px;
     }
