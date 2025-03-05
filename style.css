@@ -28,6 +28,11 @@ body {
     background-size: cover;
 }
 
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
 .coming-soon {
     text-align: center;
 }
@@ -44,25 +49,30 @@ body {
 }
 
 .form-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    width: 25%;
 }
 
 .form-container form {
-    flex: 1;
-    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.form-container .input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
 .form-container label {
-    flex: 0;
     font-size: 1.2rem;
-    margin-right: 10px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .form-container input[type="email"] {
@@ -83,7 +93,6 @@ body {
 }
 
 .form-container button {
-    flex: 0 0 auto;
     padding: 10px 25px;
     font-size: 1rem;
     cursor: pointer;
@@ -113,34 +122,25 @@ body {
     margin: 20px auto;
 }
 
-h1 {
-    font-size: 4rem;
-    margin: 0;
-}
 
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
 
-    .coming-soon {
-        padding: 10px;
-    }
-
-    .form-container {
-        flex-direction: column;
-    }
-
-    .form-container form {
+    .form-container .input-group {
         flex-direction: column;
     }
 
     .form-container label,
     .form-container input[type="email"],
     .form-container button {
-        flex: 0 0;
         margin-right: 0;
         margin-bottom: 15px;
+    }
+
+    .form-container input[type="email"] {
+        width: 80%;
     }
 }
 
@@ -149,23 +149,18 @@ h1 {
         font-size: 2rem;
     }
 
-    .coming-soon {
-        padding: 5px;
-    }
-
-    .form-container {
-        flex-direction: column;
-    }
-
-    .form-container form {
+    .form-container .input-group {
         flex-direction: column;
     }
 
     .form-container label,
-    .form-container input[type="email"],
+    .form-container input[type="email"]
     .form-container button {
-        flex: 0 0;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .form-container input[type="email"] {
+        width: 80%;
     }
 }
