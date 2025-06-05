@@ -182,8 +182,23 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
     .video-container {
         width: 90%;
-        padding-bottom: 50.625%; /* Adjusted for aspect ratio */
+        margin: 15px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-container {
+        margin: 10px auto;
+    }
+
+    .form-container {
+        margin-top: 10px;
     }
 }
