@@ -122,6 +122,21 @@ h1 {
     margin: 20px auto;
 }
 
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 @media screen and (max-width: 768px) {
     h1 {
@@ -142,6 +157,11 @@ h1 {
     .form-container input[type="email"] {
         width: 80%;
     }
+
+    .video-container {
+        width: 90%;
+        margin: 15px auto; /* Further reduced margin */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -154,7 +174,7 @@ h1 {
     }
 
     .form-container label,
-    .form-container input[type="email"]
+    .form-container input[type="email"],
     .form-container button {
         margin-right: 0;
         margin-bottom: 10px;
@@ -163,42 +183,8 @@ h1 {
     .form-container input[type="email"] {
         width: 80%;
     }
-}
 
-.video-container {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 30px auto;
-    height: auto;
-    aspect-ratio: 16/9;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .video-container {
-        width: 90%;
-        margin: 15px auto;
-    }
-}
-
-@media screen and (max-width: 480px) {
     .video-container {
         margin: 10px auto;
-    }
-
-    .form-container {
-        margin-top: 10px;
     }
 }
